@@ -22,19 +22,20 @@ def process_as_components(bin_img):
         cur_img[mask] = 1
 
         #steger or skeleton
-        if i < 5:
-            Skeleton.skeleton(cur_img)
+
 
     plt.imshow(cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB), interpolation="nearest")
     plt.axis('off')
     plt.savefig('t.png', bbox_inches='tight', pad_inches=0.0)
     plt.show()
 
-file_path = "./binary_image.png"
+file_path = "./center-v.jpg"
 bin_img = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)
 
-#process_as_components(bin_img)
 #res = Skeleton.skeleton(bin_img)
+#bin_img[bin_img > 0] = 1
 res = Steger.steger(bin_img)
-res[res > 0] = 1
-Skeleton.morph_find(bin_img)
+#Skeleton.skeleton(bin_img)
+#res[res > 0] = 1
+#Skeleton.skeleton(res)
+

@@ -4,6 +4,9 @@ from matplotlib import pyplot as plt
 import cv2
 def skeleton(bin_img):
     sk_img = morphology.skeletonize(bin_img)
+
+    fig, ax = plt.subplots()
+    plt.subplots_adjust(left=0, right=1, top=1, bottom=0, wspace=0, hspace=0)
     plt.imshow(sk_img, cmap="gray")
     plt.axis('off')
     plt.show()

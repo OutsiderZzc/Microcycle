@@ -9,7 +9,7 @@ from skimage.metrics import structural_similarity as compare_ssim
 import init
 import Steger
 
-avi_file_path = "./20231118190703.avi"
+avi_file_path = "D:/BaiduNetdiskDownload/2023LPS鼠/大鼠4/2024010104-1h/20240101142215.avi"
 
 frame_list, fps, total_frames = init.get_frames_by_aviFilePath(avi_file_path)
 # BGR通道 转化为 RGB通道
